@@ -1,14 +1,14 @@
-html {
-  scroll-behavior: smooth;
-  font-size: 60%;
-}
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 60%;
 }
 
 body {
@@ -45,6 +45,9 @@ body {
 #header nav ul li {
   margin-right: 4rem;
 }
+#header nav ul li :hover {
+  color: #0bb029;
+}
 #header nav ul li a {
   color: #fff;
   font-size: 2rem;
@@ -52,11 +55,68 @@ body {
 }
 
 #home {
-  min-height: 100vh;
-  background: #161616;
+  background: rgba(22, 22, 22, 0.5);
+  position: relative;
+}
+#home .content h1 {
+  font-size: 5rem;
+  font-weight: bolder;
+  color: #fff;
+  margin-left: 40px;
+}
+#home .content h2 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  color: #fff;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+#home .content p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+#home .content button {
+  outline: none;
+  border-radius: 5rem;
+  border: none;
+  color: #fff;
+  background: #0bb029;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-top: 20px;
+  height: 4rem;
+  width: 14rem;
+}
+#home .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  min-width: 100%;
+  z-index: -1;
+}
+#home .video-container .vid {
+  position: absolute;
+  height: 100vh;
+  min-width: 100%;
+  object-fit: cover;
+  display: none;
+}
+#home .video-container .vid1 {
+  display: block;
 }
 
 @media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
   #header .hamburger {
     display: block;
   }

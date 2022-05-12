@@ -43,28 +43,33 @@
         </ul>
       </nav>
 
-      <div class="hamburger" id="hamburger">
-        <i class="fa-solid fa-bars"></i>
-      </div>
+      <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
 
-      <a href="#" class="logo"><img alt="logo" src="images/logo.png" /></a>
+      <a href="#" class="logo"><img alt="logo" src="media/logo.png" /></a>
+
     </header>
-
-    <section id="home" class="container-fluid"></section>
+    <section id="home" class="container-fluid">
+        <div class="row min-vh-100 align-items-center pl-0">
+            <div class="col-md-8 ml-md-5 text-md-left text-left content">
+                <h1>JerkNite Caribbean Restaurant 🌶️ </h1>
+                <h2>In the heart of New York City 🗽</h2>
+                <a href-"#special"><button>Order Now</button></a>
+            </div>
+            <div class="video-container">
+                <video src="media/FlippingChickenGrill.mp4" autoplay loop muted class="vid vid1"></video>
+            </div>
+        </div>
+    </section>
 
     <script>
       $(document).ready(function () {
-
-
         $(".hamburger").click(function () {
           $("nav").toggleClass("nav-toggle");
-
         });
 
-        $('nav ul li a').click(function() {
-           $("nav").removeClass('nav-toggle');
+        $("nav ul li a").click(function () {
+          $("nav").removeClass("nav-toggle");
         });
-
       });
     </script>
   </body>
