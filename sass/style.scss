@@ -15,6 +15,17 @@
   margin-top: 20px;
 }
 
+@mixin heading() {
+  font-size: 4rem;
+  color: #000;
+  padding-top: 7rem;
+  margin-bottom: 2rem;
+
+  span {
+    color: #0bb029;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -68,6 +79,7 @@ body {
         margin-right: 4rem;
         :hover {
           color: #0bb029;
+          transition: 0.3s;
         }
         a {
           color: #fff;
@@ -75,6 +87,18 @@ body {
           text-decoration: none;
         }
       }
+    }
+  }
+}
+
+.header-active {
+  background: #333;
+  height: 6rem;
+  box-shadow: 0.2rem 0 0.5rem #000;
+
+  nav {
+    ul {
+      margin: 0;
     }
   }
 }
@@ -90,7 +114,7 @@ body {
       color: #fff;
       margin-left: 40px;
     }
-    
+
     h2 {
       font-size: 3.5rem;
       font-weight: bolder;
@@ -98,15 +122,17 @@ body {
       margin-left: 40px;
       margin-top: 20px;
     }
-    p {
-      font-size: 1.5rem;
-      color: #ccc;
-
-    }
     button {
       @include button();
       height: 4rem;
       width: 14rem;
+
+      &:hover {
+        color: #000;
+        border: solid #0bb029;
+        background-color: #fff;
+        transition: 0.3s;
+      }
     }
   }
 
@@ -115,58 +141,253 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
-    min-width: 100%;
+    width: 100%;
+    padding-left: 0;
     z-index: -1;
 
     .vid {
       position: absolute;
       height: 100vh;
-      min-width: 100%;
+      width: 100%;
       object-fit: cover;
       display: none;
     }
     .vid1 {
       display: block;
     }
-
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 50%;
   }
 
-  #header {
-    .hamburger {
-      display: block;
+  @media (max-width: 768px) {
+    html {
+      font-size: 50%;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: -120%;
-      height: 100vh;
-      width: 35rem;
-      background: #000;
+    #header {
+      .hamburger {
+        display: block;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: -120%;
+        height: 100vh;
+        width: 35rem;
+        background: #000;
+      }
+
+      ul {
+        flex-flow: column;
+        justify-content: center;
+        height: 100%;
+
+        li {
+          margin: 2rem 0;
+
+          a {
+            font-size: 3.5rem;
+            border-radius: 5rem;
+          }
+        }
+      }
+
+      .nav-toggle {
+        left: 0%;
+      }
     }
-
-    ul {
-      flex-flow: column;
-      justify-content: center;
-      height: 100%;
-
-      li {
-        margin: 2rem 0;
-
-        a {
-          font-size: 3.5rem;
-          border-radius: 5rem;
+    #about {
+      .image {
+        text-align: center;
+        img {
+          width: 55vw;
+          height: 45vh;
+          margin-left: 140px;
+          margin-top: 20px;
         }
       }
     }
-    .nav-toggle {
-      left: 0%;
+
+  
+  }
+}
+
+#specials {
+  background: #000;
+  min-height: 100vh;
+
+  .heading {
+    h2 {
+      @include heading();
+      color: #fff;
+    }
+    p {
+      color: #fff;
+      font-size: 2rem;
+    }
+  }
+  .card-container {
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .card {
+      height: 40rem;
+      width: 30rem;
+      background: #fff;
+      padding: 1rem;
+      margin: 2rem;
+      text-align: center;
+
+      img {
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+      }
+      p {
+        font-size: 1.4rem;
+        margin: 2rem 0;
+      }
+      button {
+        outline: none;
+        border: none;
+        border-radius: 5rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        letter-spacing: 0.2rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        height: 4rem;
+        width: 14rem;
+        background: #0bb029;
+        color: #fff;
+
+        &:hover {
+          color: #000;
+          border: solid #0bb029;
+          background-color: #fff;
+          transition: 0.3s;
+        }
+      }
     }
   }
 }
+
+#about {
+  .heading {
+    h2 {
+      @include heading();
+    }
+  }
+
+  .content {
+    margin: 5rem auto;
+
+    p {
+      font-size: 1.7rem;
+    }
+
+    button {
+      @include button();
+      height: 4rem;
+      width: 14rem;
+
+      &:hover {
+        color: #000;
+        border: solid #0bb029;
+        background-color: #fff;
+        transition: 0.3s;
+      }
+    }
+  }
+  .image {
+    img {
+      width: 50vw;
+      height: 45vh;
+      margin-left: 120px;
+      margin-top: 20px;
+    }
+  }
+}
+
+
+#dishes {
+  min-height: 100vh;
+  width: 100vw;
+
+  .heading {
+    h2 {
+      @include heading();
+    }
+  }
+
+  .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    width: 90%;
+
+    .box {
+      height: 20rem;
+      width: 25rem;
+      border-radius: .5rem;
+      margin: 2rem;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 .5rem #333;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .info {
+        position: absolute;
+        top:0; left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(51,51,51, .6);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        flex-flow: column;
+        color: #fff;
+
+        h3{
+          font-size: 3rem;
+        }
+        p{
+          font-size: 1.3rem;
+          border-bottom: .2rem solid #0bb029;
+          border-top: .2rem solid #0bb029;
+          margin: 1rem 2rem;
+        }
+
+        button{
+          @include button();
+          height: 4rem;
+          width: 14rem;
+          margin-right: 40px;
+
+          &:hover {
+            color: #000;
+            border: solid #0bb029;
+            background-color: #fff;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
