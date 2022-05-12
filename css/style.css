@@ -26,6 +26,13 @@ body {
   padding: 2rem 4rem;
   z-index: 1000;
 }
+#header .hamburger {
+  font-size: 4rem;
+  z-index: 10000;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
 #header .logo img {
   height: 5rem;
 }
@@ -47,6 +54,35 @@ body {
 #home {
   min-height: 100vh;
   background: #161616;
+}
+
+@media (max-width: 768px) {
+  #header .hamburger {
+    display: block;
+  }
+  #header nav {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    height: 100vh;
+    width: 35rem;
+    background: #000;
+  }
+  #header ul {
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+  }
+  #header ul li {
+    margin: 2rem 0;
+  }
+  #header ul li a {
+    font-size: 3.5rem;
+    border-radius: 5rem;
+  }
+  #header .nav-toggle {
+    left: 0%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

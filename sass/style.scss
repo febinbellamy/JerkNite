@@ -26,10 +26,18 @@ body {
   padding: 2rem 4rem;
   z-index: 1000;
 
+  .hamburger {
+    font-size: 4rem;
+    z-index: 10000;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+
   .logo {
-      img {
-        height: 5rem;
-      }
+    img {
+      height: 5rem;
+    }
   }
 
   nav {
@@ -63,43 +71,41 @@ body {
 
 
 
-// .hamburger {
-//   display: none;
-// }
 
-// .hamburger:focus {
-//   outline: 0;
-// }
 
-// @media only screen and (max-width: 1000px) {
-//   .hamburger {
-//     display: block;
-//     border: 0;
-//     background-color: transparent;
-//     color: white;
-//     font-size: 30px;
-//     margin: 20px;
-//     align-self: flex-end;
-//   }
+@media (max-width: 768px) {
+  #header {
+    .hamburger {
+      display: block;
+    }
 
-//   nav ul {
-//     display: none;
-//     background-color: #2b2c38;
-//     margin-bottom: 10px;
-//     margin-top: 0px;
-//   }
+    nav {
+      position: fixed;
+      top: 0;
+      left: -120%;
+      height: 100vh;
+      width: 35rem;
+      background: #000;
+    }
 
-//   ul.show {
-//     display: block;
-//   }
+    ul {
+      flex-flow: column;
+      justify-content: center;
+      height: 100%;
 
-//   nav {
-//     display: flex;
-//     flex-direction: column-reverse;
-//     background-color: #2b2c38;
-//   }
+      
+      li {
+        margin: 2rem 0;
 
-//   .logo {
-//     display: none;
-//   }
-// }
+        a {
+          font-size: 3.5rem;
+          border-radius: 5rem;
+        }
+      }
+
+    }
+    .nav-toggle {
+      left: 0%;
+    }
+  }
+}
