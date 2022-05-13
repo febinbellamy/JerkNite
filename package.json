@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://febinbellamy.github.io/JerkNite",
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "jquery": "^3.6.0",
     "sass": "^1.51.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d caribbean-restaurant-site"
   },
   "author": "",
   "license": "ISC"
