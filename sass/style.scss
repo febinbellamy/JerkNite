@@ -206,8 +206,6 @@ body {
         }
       }
     }
-
-  
   }
 }
 
@@ -315,7 +313,6 @@ body {
   }
 }
 
-
 #dishes {
   min-height: 100vh;
   width: 100vw;
@@ -326,7 +323,7 @@ body {
     }
   }
 
-  .box-container{
+  .box-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -337,12 +334,12 @@ body {
     .box {
       height: 20rem;
       width: 25rem;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       margin: 2rem;
       cursor: pointer;
       overflow: hidden;
       position: relative;
-      box-shadow: 0 0 .5rem #333;
+      box-shadow: 0 0 0.5rem #333;
 
       img {
         height: 100%;
@@ -352,28 +349,29 @@ body {
 
       .info {
         position: absolute;
-        top:0; left: 0;
+        top: 0;
+        left: 0;
         height: 100%;
         width: 100%;
-        background: rgba(51,51,51, .6);
+        background: rgba(51, 51, 51, 0.6);
         text-align: center;
         display: flex;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;
         flex-flow: column;
         color: #fff;
 
-        h3{
+        h3 {
           font-size: 3rem;
         }
-        p{
+        p {
           font-size: 1.3rem;
-          border-bottom: .2rem solid #0bb029;
-          border-top: .2rem solid #0bb029;
+          border-bottom: 0.2rem solid #0bb029;
+          border-top: 0.2rem solid #0bb029;
           margin: 1rem 2rem;
         }
 
-        button{
+        button {
           @include button();
           height: 4rem;
           width: 14rem;
@@ -391,3 +389,69 @@ body {
   }
 }
 
+#contact {
+  min-height: 100vh;
+  width: 100vw;
+  background: url(../media/backgroundImg.avif) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .heading {
+    h2 {
+      @include heading();
+      color: white;
+    }
+  }
+  form {
+    background: #fff;
+    padding-top: 2rem;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem #000;
+
+    .inputBox {
+      position: relative;
+      text-align: center;
+
+      input,
+      textarea {
+        outline: none;
+        font-size: 2rem;
+        border: 0.2rem solid #333;
+        border-radius: 0.2rem;
+        margin: 2rem 0;
+        padding: 0 1rem;
+        background: none;
+        height: 4rem;
+        width: 90%;
+      }
+      textarea {
+        padding: 1rem;
+        resize: none;
+        height: 20rem;
+      }
+      h3 {
+        position: absolute; 
+        top: 3rem;
+        left: 7%;
+      }
+    }
+    input[type="submit"] {
+      @include button();
+      height: 4rem;
+      width: 12rem;
+      margin-bottom: 4rem; 
+      margin-right: 4%;
+
+      color: #fff;
+      background-color: #0bb029;
+
+      &:hover {
+        color: #000;
+        border: solid #0bb029;
+        background-color: #fff;
+        transition: 0.3s;
+      }
+    }
+  }
+}
