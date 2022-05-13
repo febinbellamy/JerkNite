@@ -73,6 +73,7 @@ body {
   font-weight: bolder;
   color: #fff;
   margin-left: 40px;
+  margin-top: 40px;
 }
 #home .content h2 {
   font-size: 3.5rem;
@@ -124,46 +125,6 @@ body {
 #home .video-container .vid1 {
   display: block;
 }
-@media (max-width: 768px) {
-  #home html {
-    font-size: 50%;
-  }
-  #home #header .hamburger {
-    display: block;
-  }
-  #home #header nav {
-    position: fixed;
-    top: 0;
-    left: -120%;
-    height: 100vh;
-    width: 35rem;
-    background: #000;
-  }
-  #home #header ul {
-    flex-flow: column;
-    justify-content: center;
-    height: 100%;
-  }
-  #home #header ul li {
-    margin: 2rem 0;
-  }
-  #home #header ul li a {
-    font-size: 3.5rem;
-    border-radius: 5rem;
-  }
-  #home #header .nav-toggle {
-    left: 0%;
-  }
-  #home #about .image {
-    text-align: center;
-  }
-  #home #about .image img {
-    width: 55vw;
-    height: 45vh;
-    margin-left: 140px;
-    margin-top: 20px;
-  }
-}
 
 #specials {
   background: #000;
@@ -190,6 +151,7 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 #specials .card-container .card {
   height: 40rem;
@@ -298,6 +260,7 @@ body {
   flex-wrap: wrap;
   margin: 1rem auto;
   width: 90%;
+  padding-bottom: 20px;
 }
 #dishes .box-container .box {
   height: 20rem;
@@ -440,6 +403,49 @@ body {
   border: solid #0bb029;
   background-color: #fff;
   transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  #header #hamburger {
+    display: block;
+  }
+  #header nav {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    height: 100vh;
+    width: 35rem;
+    background: #000;
+  }
+  #header ul {
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+  }
+  #header ul li {
+    margin: 2rem 0;
+  }
+  #header ul li a {
+    font-size: 3.5rem;
+    border-radius: 5rem;
+  }
+  #header .nav-toggle {
+    left: 0%;
+  }
+
+  #about .image {
+    text-align: center;
+  }
+  #about .image img {
+    width: 55vw;
+    height: 45vh;
+    margin-left: 140px;
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
