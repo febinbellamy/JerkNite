@@ -447,5 +447,73 @@ body {
     margin-top: 20px;
   }
 }
+#footer {
+  background-color: #000;
+}
+#footer .brand {
+  text-align: center;
+  margin-top: 2rem;
+}
+#footer .brand .icons a {
+  font-size: 2rem;
+  margin: 2rem 1rem;
+  color: #fff;
+}
+#footer .footer-links {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  margin: 1rem 0;
+}
+#footer .footer-links h3 {
+  font-size: 2.2rem;
+  color: #000;
+}
+#footer .footer-links a {
+  color: #fff;
+  font-size: 1.7rem;
+}
+#footer .letter h2 {
+  font-size: 2rem;
+  margin: 2rem 0;
+  color: #fff;
+}
+#footer .letter input[type=text] {
+  border: 0.2rem solid #fff;
+  outline: none;
+  background: none;
+  height: 4rem;
+  width: 22rem;
+  padding: 0 1rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+#footer .letter input[type=submit] {
+  outline: none;
+  border-radius: 5rem;
+  border: none;
+  color: #fff;
+  background: #0bb029;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-top: 20px;
+  height: 4rem;
+  width: 12rem;
+  margin: 1rem 0;
+  color: #fff;
+  background-color: #0bb029;
+}
+#footer .letter input[type=submit]:hover {
+  color: #000;
+  border: solid #0bb029;
+  background-color: #fff;
+  transition: 0.3s;
+}
 
 /*# sourceMappingURL=style.css.map */
