@@ -458,6 +458,7 @@ body {
   font-size: 2rem;
   margin: 2rem 1rem;
   color: #fff;
+  text-decoration: none;
 }
 #footer .footer-links {
   text-align: center;

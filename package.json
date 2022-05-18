@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "deploy": "gh-pages -d caribbean-restaurant-site"
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC"
